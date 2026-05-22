@@ -1,0 +1,48 @@
+@use '../../styles/tokens/index' as tokens;
+@use '../../styles/mixins/index' as mixins;
+
+.search-input {
+  position: relative;
+}
+
+.search-input__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input__icon {
+  position: absolute;
+  left: tokens.$space-3;
+  color: tokens.$color-text-muted;
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+.search-input__field {
+  width: 100%;
+  height: 32px;
+  padding: 0 tokens.$space-3 0 tokens.$space-8;
+  background-color: tokens.$color-gray-100;
+  border: 1px solid transparent;
+  border-radius: tokens.$radius-full;
+  color: tokens.$color-text-primary;
+  font-size: tokens.$font-size-sm;
+  transition: border-color 120ms ease, background-color 120ms ease;
+
+  &::placeholder {
+    color: tokens.$color-text-muted;
+  }
+
+  &::-webkit-search-cancel-button {
+    display: none;
+  }
+
+  @include mixins.focus-ring(var(--color-primary));
+
+  &:focus-visible {
+    background-color: tokens.$color-gray-200;
+    border-color: transparent;
+    outline-offset: 0;
+  }
+}

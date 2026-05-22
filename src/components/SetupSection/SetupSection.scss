@@ -1,0 +1,33 @@
+@use '../../styles/tokens/index' as tokens;
+@use '../../styles/mixins/index' as mixins;
+
+.setup-section {
+  display: flex;
+  flex-direction: column;
+  gap: tokens.$space-3;
+}
+
+.setup-section__step-label {
+  font-size: tokens.$font-size-base;
+  color: tokens.$color-text-secondary;
+
+  strong {
+    font-weight: tokens.$font-weight-semibold;
+    color: tokens.$color-text-primary;
+  }
+}
+
+.setup-section__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: tokens.$space-4;
+
+  // Step 1 has a single wide card — don't shrink it
+  &:has(> :only-child) {
+    grid-template-columns: 1fr;
+  }
+
+  @include mixins.respond-to('sm') {
+    grid-template-columns: 1fr;
+  }
+}

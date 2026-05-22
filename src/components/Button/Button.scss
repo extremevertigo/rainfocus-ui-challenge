@@ -1,0 +1,72 @@
+@use '../../styles/tokens/index' as tokens;
+@use '../../styles/mixins/index' as mixins;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: tokens.$space-2;
+  font-family: tokens.$font-family-base;
+  font-weight: tokens.$font-weight-medium;
+  border-radius: tokens.$radius-md;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 120ms ease, border-color 120ms ease, color 120ms ease, box-shadow 120ms ease;
+  @include mixins.focus-ring;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.button--primary {
+  background-color: tokens.$color-primary;
+  border-color: tokens.$color-primary;
+  color: tokens.$color-white;
+
+  &:hover:not(:disabled) {
+    background-color: tokens.$color-primary-hover;
+    border-color: tokens.$color-primary-hover;
+  }
+}
+
+.button--ghost {
+  background-color: transparent;
+  border-color: transparent;
+  color: tokens.$color-text-primary;
+
+  &:hover:not(:disabled) {
+    background-color: tokens.$color-gray-100;
+  }
+}
+
+.button--outline {
+  background-color: transparent;
+  border-color: tokens.$color-border;
+  color: tokens.$color-text-primary;
+
+  &:hover:not(:disabled) {
+    background-color: tokens.$color-gray-50;
+    border-color: tokens.$color-gray-300;
+  }
+}
+
+.button--sm {
+  font-size: tokens.$font-size-sm;
+  padding: tokens.$space-1 tokens.$space-3;
+  height: 28px;
+}
+
+.button--md {
+  font-size: tokens.$font-size-base;
+  padding: tokens.$space-2 tokens.$space-4;
+  height: 36px;
+}
+
+.button--lg {
+  font-size: tokens.$font-size-lg;
+  padding: tokens.$space-3 tokens.$space-6;
+  height: 44px;
+}

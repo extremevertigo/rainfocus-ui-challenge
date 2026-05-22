@@ -1,0 +1,67 @@
+$color-primary:          #6E41E2;
+$color-primary-hover:    #5C34C4;
+$color-primary-light:    #EDE9FE;
+$color-primary-lighter:  #F5F3FF;
+
+$color-gray-900:  #111827;
+$color-gray-800:  #1F2937;
+$color-gray-700:  #374151;
+$color-gray-600:  #4B5563;
+$color-gray-500:  #6B7280;
+$color-gray-400:  #9CA3AF;
+$color-gray-300:  #D1D5DB;
+$color-gray-200:  #E5E7EB;
+$color-gray-100:  #F3F4F6;
+$color-gray-50:   #F9FAFB;
+
+$color-white:        #FFFFFF;
+$color-bg:           #FFFFFF;
+$color-surface:      $color-white;
+$color-border:       $color-gray-200;
+$color-border-light: $color-gray-100;
+
+$color-sidebar-bg:          #FFFFFF;
+$color-sidebar-bg-hover:    #2A2640;
+$color-sidebar-active-bg:   #2D2848;
+$color-sidebar-text:        #A89EC9;
+$color-sidebar-text-active: #FFFFFF;
+$color-sidebar-border:      rgba(255, 255, 255, 0.08);
+
+$color-text-primary:   $color-gray-900;
+$color-text-secondary: $color-gray-500;
+$color-text-muted:     $color-gray-400;
+
+:root {
+  --color-primary:          #{$color-primary};
+  --color-primary-hover:    #{$color-primary-hover};
+  --color-primary-light:    #{$color-primary-light};
+  --color-primary-lighter:  #{$color-primary-lighter};
+
+  --color-gray-900:  #{$color-gray-900};
+  --color-gray-800:  #{$color-gray-800};
+  --color-gray-700:  #{$color-gray-700};
+  --color-gray-600:  #{$color-gray-600};
+  --color-gray-500:  #{$color-gray-500};
+  --color-gray-400:  #{$color-gray-400};
+  --color-gray-300:  #{$color-gray-300};
+  --color-gray-200:  #{$color-gray-200};
+  --color-gray-100:  #{$color-gray-100};
+  --color-gray-50:   #{$color-gray-50};
+
+  --color-white:        #{$color-white};
+  --color-bg:           #{$color-bg};
+  --color-surface:      #{$color-surface};
+  --color-border:       #{$color-border};
+  --color-border-light: #{$color-border-light};
+
+  --color-sidebar-bg:          #{$color-sidebar-bg};
+  --color-sidebar-bg-hover:    #{$color-sidebar-bg-hover};
+  --color-sidebar-active-bg:   #{$color-sidebar-active-bg};
+  --color-sidebar-text:        #{$color-sidebar-text};
+  --color-sidebar-text-active: #{$color-sidebar-text-active};
+  --color-sidebar-border:      #{$color-sidebar-border};
+
+  --color-text-primary:   #{$color-text-primary};
+  --color-text-secondary: #{$color-text-secondary};
+  --color-text-muted:     #{$color-text-muted};
+}

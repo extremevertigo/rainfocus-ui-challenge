@@ -1,0 +1,17 @@
+@use '../../styles/tokens/index' as tokens;
+
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: tokens.$radius-full;
+  font-weight: tokens.$font-weight-semibold;
+  line-height: 1;
+  flex-shrink: 0;
+  user-select: none;
+  background-color: tokens.$color-gray-800;
+  color: white;
+  width: 32px;
+  height: 32px;
+  font-size: tokens.$font-size-sm;
+}

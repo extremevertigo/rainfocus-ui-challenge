@@ -1,0 +1,78 @@
+@use '../../styles/tokens/index' as tokens;
+@use '../../styles/mixins/index' as mixins;
+
+.event-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: tokens.$space-4;
+  padding: tokens.$space-6;
+  background-color: tokens.$color-surface;
+
+  @include mixins.respond-to('sm') {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.event-header__identity {
+  display: flex;
+  align-items: center;
+  gap: tokens.$space-4;
+  min-width: 0;
+}
+
+.event-header__logo-wrap {
+  position: relative;
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: tokens.$radius-lg;
+  overflow: hidden;
+  background-color: tokens.$color-gray-100;
+}
+
+.event-header__logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-header__meta {
+  min-width: 0;
+}
+
+.event-header__title {
+  font-size: tokens.$font-size-3xl;
+  font-weight: tokens.$font-weight-bold;
+  color: tokens.$color-text-primary;
+  line-height: tokens.$line-height-tight;
+  margin-bottom: tokens.$space-1;
+
+  @include mixins.respond-to('sm') {
+    font-size: tokens.$font-size-2xl;
+  }
+}
+
+.event-header__details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: tokens.$space-2;
+  font-size: tokens.$font-size-base;
+  color: tokens.$color-text-secondary;
+
+  @include mixins.respond-to('sm') {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: tokens.$space-1;
+  }
+}
+
+.event-header__actions {
+  flex-shrink: 0;
+
+  @include mixins.respond-to('sm') {
+    align-self: flex-start;
+  }
+}

@@ -1,0 +1,35 @@
+@use 'tokens/index' as tokens;
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  font-family: tokens.$font-family-base;
+  font-size: tokens.$font-size-base;
+  font-weight: tokens.$font-weight-normal;
+  line-height: tokens.$line-height-base;
+  color: tokens.$color-text-primary;
+  background-color: tokens.$color-bg;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: tokens.$font-weight-semibold;
+  line-height: tokens.$line-height-tight;
+  color: tokens.$color-text-primary;
+}
+
+h1 { font-size: tokens.$font-size-3xl; }
+h2 { font-size: tokens.$font-size-2xl; }
+h3 { font-size: tokens.$font-size-xl; }
+h4 { font-size: tokens.$font-size-lg; }

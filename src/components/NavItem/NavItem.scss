@@ -1,0 +1,29 @@
+@use '../../styles/tokens/index' as tokens;
+@use '../../styles/mixins/index' as mixins;
+
+.nav-item {
+  display: block;
+  padding: tokens.$space-1 tokens.$space-4 tokens.$space-1 48px;
+  font-size: tokens.$font-size-sm;
+  font-weight: tokens.$font-weight-medium;
+  color: tokens.$color-text-secondary;
+  border-radius: tokens.$radius-md;
+  transition: background-color 120ms ease, color 120ms ease;
+  @include mixins.focus-ring(var(--color-primary));
+
+  &:hover {
+    background-color: tokens.$color-gray-100;
+    color: tokens.$color-text-primary;
+  }
+}
+
+.nav-item--active {
+  background-color: tokens.$color-primary-lighter;
+  color: tokens.$color-primary;
+  font-weight: tokens.$font-weight-semibold;
+
+  &:hover {
+    background-color: tokens.$color-primary-lighter;
+    color: tokens.$color-primary;
+  }
+}

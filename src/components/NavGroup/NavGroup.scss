@@ -1,0 +1,80 @@
+@use '../../styles/tokens/index' as tokens;
+@use '../../styles/mixins/index' as mixins;
+
+.nav-group {
+  list-style: none;
+}
+
+.nav-group__trigger {
+  display: flex;
+  align-items: center;
+  gap: tokens.$space-3;
+  width: 100%;
+  padding: tokens.$space-2 tokens.$space-3;
+  border-radius: tokens.$radius-lg;
+  color: tokens.$color-text-secondary;
+  font-size: tokens.$font-size-base;
+  font-weight: tokens.$font-weight-medium;
+  transition: background-color 120ms ease, color 120ms ease;
+  @include mixins.focus-ring(var(--color-primary));
+
+  &:hover {
+    background-color: tokens.$color-gray-100;
+    color: tokens.$color-text-primary;
+  }
+}
+
+.nav-group__trigger--expanded {
+  background-color: tokens.$color-primary-lighter;
+  color: tokens.$color-primary;
+  font-weight: tokens.$font-weight-bold;
+
+  &:hover {
+    background-color: tokens.$color-primary-lighter;
+    color: tokens.$color-primary;
+  }
+}
+
+.nav-group__dot {
+  width: 32px;
+  height: 32px;
+  border-radius: tokens.$radius-full;
+  flex-shrink: 0;
+}
+
+.nav-group__dot--purple {
+  background-color: tokens.$color-primary;
+}
+
+.nav-group__dot--gray {
+  background-color: tokens.$color-gray-400;
+}
+
+.nav-group__label {
+  flex: 1;
+  text-align: left;
+}
+
+.nav-group__chevron {
+  color: tokens.$color-text-secondary;
+  transition: transform 200ms ease;
+  flex-shrink: 0;
+
+  .nav-group__trigger--expanded & {
+    transform: rotate(180deg);
+  }
+}
+
+.nav-group__items {
+  overflow: hidden;
+  max-height: 400px;
+  transition: max-height 200ms ease, opacity 200ms ease;
+  opacity: 1;
+  margin-top: tokens.$space-1;
+}
+
+.nav-group__items--collapsed {
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+}

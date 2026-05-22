@@ -1,0 +1,43 @@
+$font-family-base: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+$font-size-xs:   11px;
+$font-size-sm:   12px;
+$font-size-md:   13px;
+$font-size-base: 14px;
+$font-size-lg:   16px;
+$font-size-xl:   18px;
+$font-size-2xl:  20px;
+$font-size-3xl:  24px;
+
+$font-weight-normal:   400;
+$font-weight-medium:   500;
+$font-weight-semibold: 600;
+$font-weight-bold:     700;
+
+$line-height-tight:   1.2;
+$line-height-snug:    1.375;
+$line-height-base:    1.5;
+$line-height-relaxed: 1.625;
+
+:root {
+  --font-family-base: #{$font-family-base};
+
+  --font-size-xs:   #{$font-size-xs};
+  --font-size-sm:   #{$font-size-sm};
+  --font-size-md:   #{$font-size-md};
+  --font-size-base: #{$font-size-base};
+  --font-size-lg:   #{$font-size-lg};
+  --font-size-xl:   #{$font-size-xl};
+  --font-size-2xl:  #{$font-size-2xl};
+  --font-size-3xl:  #{$font-size-3xl};
+
+  --font-weight-normal:   #{$font-weight-normal};
+  --font-weight-medium:   #{$font-weight-medium};
+  --font-weight-semibold: #{$font-weight-semibold};
+  --font-weight-bold:     #{$font-weight-bold};
+
+  --line-height-tight:   #{$line-height-tight};
+  --line-height-snug:    #{$line-height-snug};
+  --line-height-base:    #{$line-height-base};
+  --line-height-relaxed: #{$line-height-relaxed};
+}

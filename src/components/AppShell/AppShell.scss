@@ -1,0 +1,60 @@
+@use '../../styles/tokens/index' as tokens;
+@use '../../styles/mixins/index' as mixins;
+
+.app-shell {
+  display: grid;
+  grid-template-columns: tokens.$sidebar-width 1fr;
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  @include mixins.respond-to('md') {
+    grid-template-columns: 1fr;
+  }
+}
+
+.app-shell__main-wrap {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background-color: tokens.$color-bg;
+}
+
+.app-shell__main {
+  flex: 1;
+}
+
+// mobile top bar — hidden on desktop
+.app-shell__topbar {
+  display: none;
+  align-items: center;
+  gap: tokens.$space-3;
+  padding: tokens.$space-3 tokens.$space-4;
+  background-color: tokens.$color-surface;
+  border-bottom: 1px solid tokens.$color-border;
+
+  @include mixins.respond-to('md') {
+    display: flex;
+  }
+}
+
+.app-shell__menu-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: tokens.$radius-md;
+  color: tokens.$color-text-primary;
+  transition: background-color 120ms ease;
+  @include mixins.focus-ring(var(--color-primary));
+
+  &:hover {
+    background-color: tokens.$color-gray-100;
+  }
+}
+
+.app-shell__topbar-title {
+  font-size: tokens.$font-size-base;
+  font-weight: tokens.$font-weight-semibold;
+  color: tokens.$color-text-primary;
+}

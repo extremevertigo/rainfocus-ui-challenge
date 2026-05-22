@@ -1,0 +1,73 @@
+@use '../../styles/tokens/index' as tokens;
+@use '../../styles/mixins/index' as mixins;
+
+.setup-guide {
+  padding: tokens.$space-6;
+  display: flex;
+  flex-direction: column;
+  gap: tokens.$space-6;
+
+  @include mixins.respond-to('sm') {
+    padding: tokens.$space-4;
+  }
+}
+
+// ─── Intro ────────────────────────────────────────────────────────────────────
+
+.setup-guide__intro {
+  display: flex;
+  flex-direction: column;
+  gap: tokens.$space-2;
+}
+
+.setup-guide__heading {
+  font-size: tokens.$font-size-2xl;
+  font-weight: tokens.$font-weight-semibold;
+  color: tokens.$color-text-primary;
+}
+
+.setup-guide__subtitle {
+  font-size: tokens.$font-size-base;
+  color: tokens.$color-text-secondary;
+  max-width: 560px;
+}
+
+// ─── Divider ──────────────────────────────────────────────────────────────────
+
+.setup-guide__divider {
+  border: none;
+  border-top: 1px solid tokens.$color-border;
+  margin: 0;
+}
+
+// ─── Section label ────────────────────────────────────────────────────────────
+
+.setup-guide__section-label {
+  display: flex;
+  align-items: center;
+  gap: tokens.$space-3;
+}
+
+.setup-guide__section-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  color: tokens.$color-white;
+  flex-shrink: 0;
+}
+
+.setup-guide__section-name {
+  font-size: tokens.$font-size-lg;
+  font-weight: tokens.$font-weight-semibold;
+  color: tokens.$color-text-primary;
+}
+
+// ─── Steps ────────────────────────────────────────────────────────────────────
+
+.setup-guide__steps {
+  display: flex;
+  flex-direction: column;
+  gap: tokens.$space-8;
+}

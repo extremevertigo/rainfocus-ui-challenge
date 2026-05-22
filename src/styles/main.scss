@@ -1,0 +1,6 @@
+// ─── Global Stylesheet Entry Point ────────────────────────────────────────────
+// Import order: tokens (emits :root props) → reset → global base
+
+@use 'tokens/index';   // side-effect: writes CSS custom properties to :root
+@use 'reset';
+@use 'global';
