@@ -4,7 +4,7 @@ A UI developer challenge built with React, TypeScript, and Vite.
 
 ## Requirements
 
-- Node.js 18+
+- Node.js 20+
 - npm
 
 ## Getting started
